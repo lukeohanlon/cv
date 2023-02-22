@@ -35,24 +35,26 @@
               <h2 class="contact-info">Phone</h2>
               <a href="tel:0892568773"><p>089-256-8773</p></a>
               <h2 class="contact-info">Email</h2>
-              <p><a href="mailto:lukeohanlon@programmer.net">lukeohanlon@programmer.net</a></p>
+              <a href="mailto:lukeohanlon@programmer.net">
+                <p>lukeohanlon@programmer.net</p>
+              </a>
               <h2 class="contact-info">Address</h2>
               <p>64 Corran Ard Athy</p>
               <h2 class="contact-info">Social</h2>
               <p>
+                <a href="https://lukeohanlon.github.io/cv/">
+                  <i class="fa-regular fa-folder-open icon"> </i>
+                </a>
                 <a href="https://linkedin.com">
                   <i class="fa-brands fa-linkedin icon"></i>
                 </a>
-                <a href="https://github.com">
+                <a href="https://github.com/lukeohanlon">
                   <i class="fa-brands fa-github icon"></i>
                 </a>
-                <a href="">
+                <a class="popup" href="" onmouseover="popUp()">
+                  <span class="popuptext" id="myPopup">Portfoilio comming soon!</span>
                   <i class="fa-solid fa-globe icon"></i>
                 </a>
-                <a href="https://lukeohanlon.github.io/cv/">
-                  <i class="fa-regular fa-folder-open icon">
-                    </i>
-                  </a>
               </p>
             </div>
           </div>
@@ -164,4 +166,10 @@
       </div>
     </div>
   </body>
+  <script>
+    function popUp() {
+      var popup = document.getElementById('myPopup')
+      popup.classList.toggle('show')
+    }
+  </script>
 </html>

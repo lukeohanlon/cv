@@ -13,7 +13,6 @@ a {
   text-decoration: none;
 }
 
-
 h1 {
   font-weight: 100;
 }
@@ -35,10 +34,10 @@ h2 {
 }
 
 .icon {
-  padding: 10px
+  padding: 10px;
 }
 a:hover {
-  color :#175e92;
+  color: #175e92;
 }
 
 .title {
@@ -208,6 +207,64 @@ a:hover {
   padding: 5px 50px;
 }
 
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  font-size: 0.8em;
+  width: 160px;
+  background-color: #175e92;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #175e92 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fade 0.2s ease-in-out;
+  animation: fade 0.2s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .section-content {
     margin: 0 10% 0 10%;
@@ -221,6 +278,9 @@ a:hover {
     margin: 0 5% 0 5%;
     text-align: center;
     align-items: center;
+  }
+  .other-awards-wrap {
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -236,5 +296,8 @@ a:hover {
   .right-content p {
     font-size: 3rem;
     color: red;
+  }
+  .other-awards-wrap {
+    flex-wrap: wrap;
   }
 }
